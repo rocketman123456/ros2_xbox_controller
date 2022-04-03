@@ -21,12 +21,14 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_components REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(teleop_twist_joy REQUIRED)
 
 include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 add_executable(controller_node
+  src/controller.cpp
   src/controller_node.cpp
 )
 
@@ -35,6 +37,7 @@ ament_target_dependencies(controller_node
   rclcpp_components
   sensor_msgs
   std_msgs
+  teleop_twist_joy
 )
 
 install(TARGETS controller_node
