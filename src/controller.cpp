@@ -29,5 +29,7 @@ namespace Rocket {
             std::cout << button << ", ";
         }
         std::cout << std::endl;
+
+        // TODO : send data to serial port
     }
 }
